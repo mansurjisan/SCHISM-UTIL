@@ -87,5 +87,17 @@ echo "Combine ended:    " `date`
 echo -n " $( date +%s )," >> combine_timestamp.txt
 ```
 
+# Running Interactively ./combine_output11_MPI
 
+1. request number of nodes you need
+salloc --account=nosofs --qos=batch --partition=hercules --nodes=1 --ntasks-per-node=10 --time=07:00:00 --job-name="combine_output_interactive" --exclusive
+
+2. ssh to the node
+3. cd to output file directory
+   cd /work/noaa/nosofs/mjisan/ufs-weather-model/tests/stmp/mjisan/FV3_RT/coastal_ian_atm2sch_v4/outputs
+
+4. source load_env.sh
+5. srun --label -n 10 ./combine_output11_MPI -b 1 -e 4 -w 1 -v "elev" -o schout
+6. srun --label -n 10 ./combine_output11_MPI -b 1 -e 4 -w 1 -v "wind_speed" -o schout_wind
+7. 
 
