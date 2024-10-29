@@ -99,8 +99,9 @@ salloc --account=nosofs --qos=batch --partition=hercules --nodes=1 --ntasks-per-
    cd /work/noaa/nosofs/mjisan/ufs-weather-model/tests/stmp/mjisan/FV3_RT/coastal_ian_atm2sch_v4/outputs
 
 5. source load_env.sh
-6. srun --label -n 10 ./combine_output11_MPI -b 1 -e 4 -w 1 -v "elev" -o schout
-7. srun --label -n 10 ./combine_output11_MPI -b 1 -e 4 -w 1 -v "wind_speed" -o schout_wind
+6. module load contrib/0.1 intel-oneapi-mpi/2021.7.1 netcdf-c/4.9.2
+7. srun --label -n 10 ./combine_output11_MPI -b 1 -e 4 -w 1 -v "elev" -o schout
+8. srun --label -n 10 ./combine_output11_MPI -b 1 -e 4 -w 1 -v "wind_speed" -o schout_wind
 
 # New data
 
