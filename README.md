@@ -105,6 +105,7 @@ salloc --account=nosofs --qos=batch --partition=hercules --nodes=1 --ntasks-per-
 
 # New data
 For large data
+ulimit -s unlimited
 (pyschism_mjisan) [mjisan@hercules-01-02 outputs]$ module list
 
 Currently Loaded Modules:
