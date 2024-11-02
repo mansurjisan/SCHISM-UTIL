@@ -104,4 +104,9 @@ salloc --account=nosofs --qos=batch --partition=hercules --nodes=1 --ntasks-per-
 8. srun --label -n 10 ./combine_output11_MPI -b 1 -e 4 -w 1 -v "wind_speed" -o schout_wind
 
 # New data
+For large data
+(pyschism_mjisan) [mjisan@hercules-01-02 outputs]$ module list
 
+Currently Loaded Modules:
+  1) contrib/0.1                 3) libszip/2.1.1    5) cdo/2.1.0      7) ncl/6.6.2     9) netcdf-c/4.9.2          11) esmf/8.4.2
+  2) intel-oneapi-mpi/2021.7.1   4) udunits/2.2.28   6) cairo/1.16.0   8) zlib/1.2.13  10) parallel-netcdf/1.12.3
